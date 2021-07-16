@@ -41,8 +41,6 @@ class Customer(models.Model):
     membership = models.CharField(
         max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE)
 
-# Lewra
-
 
 class Order(models.Model):
     PAYMENT_STATUS_PENDING = 'P'
@@ -52,7 +50,7 @@ class Order(models.Model):
     PAYMENT_STATUS_CHOICES = [
         (PAYMENT_STATUS_PENDING, 'Pending'),
         (PAYMENT_STATUS_COMPLETE, 'Complete'),
-        (PAYMENT_STATUS_FAILED, 'Faile'),
+        (PAYMENT_STATUS_FAILED, 'Failed'),
     ]
 
     placed_at = models.DateTimeField(auto_now_add=True)
